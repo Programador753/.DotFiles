@@ -1,4 +1,4 @@
-- name: "localhost"
+- name: "codespaces"
   hosts: localhost 
   become_method: sudo
   become_user: root

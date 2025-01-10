@@ -11,4 +11,4 @@
   become: true
 
 - include_tasks: zsh.yml
-- include_tasks: zoxide.yml
+
