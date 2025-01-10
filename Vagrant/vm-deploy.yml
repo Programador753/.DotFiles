@@ -10,7 +10,7 @@
     eclipse_base_dir: "/home/vagrant/ide/eclipse" 
   tasks:
     - name: Include task list 
-      include: "ansible/tasks/main.yml"
+        include_tasks: "ansible/tasks/main.yml"
       
     - name: change shell to zsh
       expect:
