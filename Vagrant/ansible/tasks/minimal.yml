@@ -10,5 +10,5 @@
   ignore_errors: yes 
   become: true
 
-- include: zsh.yml
-- include: zoxide.yml
+- include_tasks: zsh.yml
+- include_tasks: zoxide.yml
