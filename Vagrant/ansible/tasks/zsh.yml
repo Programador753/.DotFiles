@@ -34,7 +34,7 @@
 
 - name: Installing git configfiles
   git:
-    repo: https://github.com/SalesianosZaragoza/.DotFiles.git
+    repo: https://github.com/Programador753/.DotFiles.git
     dest: ~/.DotFiles
   ignore_errors: yes
 
