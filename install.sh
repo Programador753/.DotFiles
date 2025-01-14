@@ -57,6 +57,13 @@ else
     echo "nvm ya está instalado"
 fi
 
+# Instalar bat
+if ! command -v bat &> /dev/null; then
+    echo "Instalando bat..."
+    sudo apt-get install -y bat
+else
+    echo "bat ya está instalado"
+fi
 
 #!/usr/bin/env bash
 sudo apt update
