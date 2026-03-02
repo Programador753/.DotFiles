@@ -1,6 +1,6 @@
     
 ---
-- include_tasks: nix.xml
+- include_tasks: nix.yml
 - include_tasks: apt.yml
 - include_tasks: zsh.yml
 - include_tasks: docker.yml

@@ -1,0 +1,34 @@
+- name: Download Nix package manager script
+  get_url: 
+      url: https://nixos.org/nix/install
+      dest: /tmp/nix.sh
+      mode: 0755
+      
+- name: Install nix package manager from tmp
+  shell: /tmp/nix.sh --no-daemon
+  args:
+    creates: "{{ ansible_env.HOME }}/.nix-profile/bin/nix-env"
+
+- name: Install nix packages
+  shell: "{{ ansible_env.HOME }}/.nix-profile/bin/nix-env {{ item }}"
+  environment:
+    NIXPKGS_ALLOW_UNFREE: "1"
+  changed_when: false
+  loop:
+    - "-iA nixpkgs.eclipses.eclipse-jee"
+    - "-iA nixpkgs.vscode"
+    - "-iA nixpkgs.lazygit"
+    - "-iA nixpkgs.lazydocker"
+    - "-iA nixpkgs.awscli2"
+    - "-iA nixpkgs.rustup"
+    - "-iA nixpkgs.k3s"
+    - "-iA nixpkgs.gh"
+    - "-iA nixpkgs.nodePackages.serverless"
+    - "-iA nixpkgs.ccls"
+    - "-iA nixpkgs.dbeaver-bin"
+    - "-iA nixpkgs.cheat"
+    - "-iA nixpkgs.neovim"
+    - "-iA nixpkgs.zoxide"
+    - "-iA nixpkgs.vagrant"
+    - "-iA nixpkgs.terraform"
+    - "-iA nixpkgs.burpsuite"
