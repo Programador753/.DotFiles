@@ -141,7 +141,7 @@
   ignore_errors: yes
   become: false
 
-  - name: Install lnav
+- name: Install lnav
   homebrew:
     name: lnav
     path: /home/linuxbrew/.linuxbrew/bin
