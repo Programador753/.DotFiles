@@ -23,7 +23,6 @@
     - "-iA nixpkgs.rustup"
     - "-iA nixpkgs.k3s"
     - "-iA nixpkgs.gh"
-    - "-iA nixpkgs.nodePackages.serverless"
     - "-iA nixpkgs.ccls"
     - "-iA nixpkgs.dbeaver-bin"
     - "-iA nixpkgs.cheat"
